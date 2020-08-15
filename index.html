@@ -2,6 +2,7 @@
 <html lang="ja">
 
 <head>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
@@ -36,14 +37,12 @@
       <p>渡良瀬遊水地でみることができる野鳥たち</p>
 
   <table border="0">
-      <thead>
           <tr>
               <th>名前</th>
               <th>特徴</th>
               <th>おすすめポイント</th>
           </tr>
-      
-   <tbody>
+     <tbody>
           <tr>
               <td>カワセミ</td>
               <td>水辺に生息する小鳥　体はスズメほどの大きさ</td>
@@ -109,9 +108,21 @@
 
 
 
-
-      <p>答え　Ｑ１/C  Ｑ２/B  Ｑ３/B  Ｑ４/B Ｑ５/A</p>
+      <button type="button"  id="button1" name="button1" value="button">答えを見る</button>
+      <p id="answer">答え　Ｑ１/C  Ｑ２/B  Ｑ３/B  Ｑ４/B Ｑ５/A</p>
   </div>
+  <script>
+    $(function() {
+      // 初期表示を非表示にする
+      $('#answer').hide();
+    
+      $("#button1").click(function() {
+        // 表示する
+        $("#answer").show();
+      });
+    });
+    </script>
+
   　
   
 </body>
